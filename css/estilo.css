@@ -1,0 +1,249 @@
+/* Geral */
+
+body {
+  font-family: Arial;
+}
+
+main {
+  margin: 24px;
+}
+
+/* Cabeçalho */
+
+header img{
+  display: flex;
+  float: left;
+  margin-bottom: 23px;
+}
+
+#busca img {
+  float: right;
+}
+#busca {
+  float: right;
+  margin-top: 99px;
+}
+
+#busca input {
+  margin-top: 1.5px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #c4c4c4;
+  border: thin solid #c4c4c4;
+  border-right-style: none;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 8px;
+}
+
+/* Menu */
+
+nav {
+  clear: both;
+  
+}
+
+/*Strip the ul of padding and list styling*/
+ nav ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  position: absolute;
+  border-top: solid white 1px;
+  display: inline-block;
+}
+
+/*Create a horizontal list with spacing*/
+nav ul li {
+  display:inline-block;
+  float: left;
+  margin-right: 10px;
+  width: 100%;
+  
+}
+
+/*Style for menu links*/
+nav ul li a {
+  display:inline-block;
+  margin-right: 10px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background: #3d5057;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/*Hover state for top level links*/
+nav ul li:hover a {
+background: #19c589;
+}
+
+/*Style for dropdown links*/
+nav ul li:hover ul a {
+  background: #f3f3f3;
+  color: #2f3036;
+  height: 40px;
+  line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+nav ul li:hover ul a:hover {
+  background: #19c589;
+  color: #fff;
+}
+/*Hide dropdown links until they are needed*/
+nav ul li ul {
+  display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+  display: block;
+  float: none;
+}
+
+/*Prevent text wrapping*/
+li ul li a {
+  width: auto;
+  min-width: 100px;
+  padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+nav ul li a:hover + .hidden, .hidden:hover {
+  display: block;
+
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+  text-decoration: none;
+  color: #fff;
+  background: #3d5057;
+  text-align: center;
+  padding: 15px 0;
+  display: none;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+  display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+  display: inline-block;
+  width: 100%;
+}
+
+.current {
+  background-color: #667a82;
+}
+
+
+/* Showcase */
+
+#showcase {
+  background-image: url(../images/front-end.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.monitor {
+  padding-top: 0.9rem;
+}
+
+.monitor img {
+  margin: auto 63%;
+  width: 40%;
+}
+
+
+/* Textos */
+
+.gray {
+  background-color: #f0f0f0;
+  margin: 20px;
+  font-size: 12px;
+  color: #354348;
+}
+
+.gray p{
+  margin: 20px;
+}
+
+.gray h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #354348;
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+#fig-dir {
+  float: right;
+  margin: 3px;
+  padding: 0;
+}
+
+#fig-dir img {
+  width:100%;
+}
+
+
+#fig-esq {
+  float: left;
+  margin-bottom: 25px;
+}
+
+.gray ul {
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  margin: 0;
+  position: relative;
+  right: 30px;
+}
+
+.gray ul li {
+  height: 100%;
+}
+
+/* Rodapé */
+
+footer {
+  clear: both;
+  text-align: center;
+  background-color: #ddd;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Responsive Styles*/
+
+@media screen and (max-width : 760px){
+  /*Make dropdown links appear inline*/
+   nav ul {
+      position: static;
+      display: none;
+  }
+  /*Create vertical spacing*/
+  nav ul li {
+      margin-bottom: 1px;
+  }
+  /*Make all menu links full width*/
+  nav ul ul li, nav ul li a {
+      width: 100%;
+  }
+  /*Display 'show menu' link*/
+  .show-menu {
+      display:block;
+  }
+}
